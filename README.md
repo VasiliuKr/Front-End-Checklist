@@ -17,7 +17,7 @@
 
 1. **[Head](#head)**
 2. **[HTML](#html)**
-3. **[Webfonts](#webfonts)**
+3. **[Веб-шрифты](#веб-шрифты)**
 4. **[CSS](#css)**
 5. **[Images](#images)**
 6. **[JavaScript](#javascript)**
@@ -233,54 +233,56 @@
 
 ## HTML
 
-### Best practices
+### Лучшие практики
 
-* [ ] **HTML5 Semantic Elements:** ![Высокий][high_img] HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
+* [ ] **HTML5 Семантические теги:** ![Высокий][high_img] Семантические теги HTML5 используются правильно (header, section, footer, main...).
 
 > * 📖 [HTML Reference](http://htmlreference.io/)
 
-* [ ] **Error pages:** ![Высокий][high_img] Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
+* [ ] **Страницы-ошибки:** ![Высокий][high_img] Страница с ошибкой 404 и 5xx существуют. Помните, что для страниц с ошибками 5xx стили CSS должны быть встроенными (без внешних вызовов на текущем сервере).
 
-* [ ] **Noopener:** ![Средний][medium_img] In case you are using external links with `target="_blank"`, your link should have a `rel="noopener"` attribute to prevent tab nabbing. If you need to support older versions of Firefox, use `rel="noopener noreferrer"`.
+* [ ] **Noopener:** ![Средний][medium_img] В случаях, когда вы используете внешние ссылки с `target="_blank"`, они должны иметь атрибут `rel="noopener"`, предотвращающий возможные фишинг-атаки. Для старых версий Firefox используйте `rel="noopener noreferrer"`.
 
 > * 📖 [About rel=noopener](https://mathiasbynens.github.io/rel-noopener/)
 
-* [ ] **Clean up comments:** ![Низкий][low_img] Unnecessary code needs to be removed before sending the page to production.
+* [ ] **Удаление комментов:** ![Низкий][low_img] Ненужный код должен быть удален перед публикацией страницы.
 
-### HTML testing
+### Тестирование HTML
 
-* [ ] **W3C compliant:** ![Высокий][high_img] All pages need to be tested with the W3C validator to identify possible issues in the HTML code.
+* [ ] **W3C стандарты:** ![Высокий][high_img] Все страницы должны быть проверены на валидность стандартам W3C для определения возможных проблем в HTML коде.
 
 > * 🛠 [W3C validator](https://validator.w3.org/)
 
-* [ ] **HTML Lint:** ![Высокий][high_img] I use tools to help me analyze any issues I could have on my HTML code.
+* [ ] **HTML Lint:** ![Высокий][high_img] Используйте инструменты для анализа HTML кода.
 
 > * 🛠 [Dirty markup](https://dirtymarkup.com/)
 
-* [ ] **Link checker:** ![Высокий][high_img] There are no broken links in my page, verify that you don't have any 404 error.
+* [ ] **Проверка ссылок:** ![Высокий][high_img] На странице нет битых ссылок, удостовертесь, что нигде не выходит 404 ошибка.
 
 > * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
-* [ ] **Adblockers test:** ![Средний][medium_img] Your website shows your content correctly with adblockers enabled (You can provide a message encouraging people to disable their adblocker).
+* [ ] **Adblockers test:** ![Средний][medium_img] Ваш сайт должен корректно отображаться при включенном блокировщике рекламы (Вы также можете показать пользователю сообщение, призывающее отключить их блокировщик рекламы).
 
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
-## Webfonts
+## Веб-шрифты
 
-* [ ] **Webfont format:** ![Высокий][high_img] WOFF, WOFF2 and TTF are supported by all modern browsers.
+> **Примечание** При использовании веб-шрифтов могут появляться "вспышки" нестилизованного / невидимого текста. Удостоверьтесь в наличии резервных шрифтов и / или настройте загрузчик веб-шрифтов.
+
+* [ ] **Формат веб-шрифтов:** ![Высокий][high_img] Форматы WOFF, WOFF2 и TTF поддерживаются всеми современными браузерами.
 
 > * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
 > * 📖 [TTF/OTF - TrueType and OpenType font support](https://caniuse.com/#feat=ttf)
 > * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
 
-* [ ] **Webfont size:** ![Высокий][high_img] Webfont sizes don't exceed 2 MB (all variants included).
+* [ ] **Размер веб-шрифтов:** ![Высокий][high_img] Размер веб-шрифта не превышает  2 Мб (все варианты включены).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
