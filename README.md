@@ -271,7 +271,7 @@
 
 ## Веб-шрифты
 
-> **Примечание** При использовании веб-шрифтов могут появляться "вспышки" нестилизованного / невидимого текста. Удостоверьтесь в наличии резервных шрифтов и / или настройте загрузчик веб-шрифтов.
+> **Примечание:** При использовании веб-шрифтов могут появляться "вспышки" нестилизованного / невидимого текста. Удостоверьтесь в наличии резервных шрифтов и / или настройте загрузчик веб-шрифтов.
 
 * [ ] **Формат веб-шрифтов:** ![Высокий][high_img] Форматы WOFF, WOFF2 и TTF поддерживаются всеми современными браузерами.
 
@@ -282,80 +282,84 @@
 
 * [ ] **Размер веб-шрифтов:** ![Высокий][high_img] Размер веб-шрифта не превышает  2 Мб (все варианты включены).
 
+* [ ] **Загрузчик веб-шрифтов:** ![Низкий][low_img] Контроль над загрузкой с помощью загрузчика веб-шрифтов.
+
+> * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
+
 **[⬆ Вверх](#Содержание)**
 
 ---
 
 ## CSS
 
-> **Notes:** Take a look at [CSS guidelines](https://cssguidelin.es/) and [Sass Guidelines](https://sass-guidelin.es/) followed by most  Front-End developers. If you have a doubt about CSS properties, you can visit [CSS Reference](http://cssreference.io/).
+> **Примечание:** Взгляните на [CSS guidelines](https://cssguidelin.es/) и [Sass Guidelines](https://sass-guidelin.es/) которым следует большинство фронтенд-разработчиков. Если у вас есть сомнения по поводу CSS-свойств, посетите [CSS Reference](http://cssreference.io/).
 
-* [ ] **Responsive Web Design:** ![Высокий][high_img] The website is using responsive web design.
-* [ ] **CSS Print:** ![Средний][medium_img] A print stylesheet is provided and is correct on each page.
-* [ ] **Preprocessors:** ![Низкий][low_img] Your page is using a CSS preprocessor ([Sass](http://sass-lang.com/) is preferred).
-* [ ] **Unique ID:** ![Высокий][high_img] If IDs are used, they are unique to a page.
-* [ ] **Reset CSS:** ![Высокий][high_img] A CSS reset (reset, normalize or reboot) is used and up to date. *(If you are using a CSS Framework like Bootstrap or Foundation, a Normalize is already included into it.)*
+* [ ] **Отзывчивый веб-дизайн:** ![Высокий][high_img] На сайте используется отзывчивый веб-дизайн.
+* [ ] **CSS для печати:** ![Средний][medium_img] Стили для печати присутствуют и корректны для каждой страницы.
+* [ ] **Препроцессоры:** ![Низкий][low_img] Ваша страница использует CSS-препроцессор ([Sass](http://sass-lang.com/) предпочтителен).
+* [ ] **Уникальные ID:** ![Высокий][high_img] Если в качестве селекторов используются ID, они являются уникальными на странице.
+* [ ] **Сброс CSS:** ![Высокий][high_img] Сброс стилей (reset, normalize или reboot) используется и актуален. *(Если вы используете CSS-фреймворк типа Bootstrap или Foundation, Normalize уже включен в них.)*
 
 > * 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 > * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
 > * 📖 [Reboot](https://getbootstrap.com/docs/4.0/content/reboot/)
 
-* [ ] **JS prefix:** ![Низкий][low_img] All classes (or id- used in JavaScript files) begin with **js-** and are not styled into the CSS files.
+* [ ] **JS префикс:** ![Низкий][low_img] Все классы (или id- используемые в JavaScript-файлах) начинаются с **js-** и не стилизуются в CSS-файлах.
 
 ```html
 <div id="js-slider" class="my-slider">
-<!-- Or -->
+<!-- Или -->
 <div id="id-used-by-cms" class="js-slider my-slider">
 ```
 
-* [ ] **Embedded or inline CSS:** ![Высокий][high_img] Avoid at all cost embeding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
-* [ ] **Vendor prefixes:** ![Высокий][high_img] CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
+* [ ] **Встроенный или инлайновый CSS:** ![Высокий][high_img] Всеми силами избегайте включения CSS в тег `<style>` или использования инлайнового CSS: используйте их только по обоснованным причинам (например background-image для слайдера, критический CSS).
+* [ ] **Вендорные префиксы:** ![Высокий][high_img] Вендорные префиксы CSS используются и сгенерированы в соответствии с вашей поддержкой версий браузеров.
 
 > * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
-### Performance
+### Производительность
 
-- [ ] **Concatenation:** ![Высокий][high_img] CSS files are concatenated in a single file. *(Not for HTTP/2)*
-- [ ] **Minification:** ![Высокий][high_img] All CSS files are minified.
-- [ ] **Non-blocking:** ![Средний][medium_img] CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [ ] **Конкатенация:** ![Высокий][high_img] CSS-файлы объединены в один файл. *(не для HTTP/2)*
+- [ ] **Минификация:** ![Высокий][high_img] Все CSS-файлы минифицированы.
+- [ ] **Non-blocking:** ![Средний][medium_img] CSS-файлы не должны блокировать загрузку страницы.
 
 > * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 > * 📖 [Example of preload CSS using loadCSS](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
 
-- [ ] **Unused CSS:** ![Низкий][low_img] Remove unused CSS.
+- [ ] **Неиспользуемый CSS:** ![Низкий][low_img] Неипользуемый CSS-код удален.
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/) 🛠
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
 
-### CSS testing
+### Тестирование CSS 
 
-* [ ] **Stylelint:** ![Высокий][high_img] All CSS or SCSS files are without any errors.
+* [ ] **Stylelint:** ![Высокий][high_img] Все CSS или SCSS-файлы без каких-либо ошибок.
 
 > * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > * 📖 [Sass guidelines](https://sass-guidelin.es/)
 
-* [ ] **Responsive web design:** ![Высокий][high_img] All pages were tested at the folНизкийing breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
+* [ ] **Отзывчивый веб-дизайн:** ![Высокий][high_img] Все страницы протестированы на следующих разрешениях: 320px, 768px, 1024px (могут быть больше / отличаться в соответствии с вашей аналитикой).
 
-* [ ] **CSS Validator:** ![Средний][medium_img] The CSS was tested and pertinent errors were corrected.
+* [ ] **CSS-валидатор:** ![Средний][medium_img] CSS-код протестирован и актуальные ошибки исправлены.
 
 > * 🛠 [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-* [ ] **Desktop Browsers:** ![Высокий][high_img] All pages were tested on all current desktop browsers (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
-* [ ] **Mobile Browsers:**  ![Высокий][high_img] All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...).
-* [ ] **OS:**  ![Высокий][high_img] All pages were tested on all current OS (Windows, Android, iOS, Mac...).
+* [ ] **Десктопные браузеры:** ![Высокий][high_img] Все страницы протестированы во всех актуальных десктопных браузерах (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
+* [ ] **Мобильные браузеры:**  ![Высокий][high_img] Все страницы протестированы во всех актуальных мобильных браузерах (Native browser, Chrome, Safari...).
+* [ ] **ОС:**  ![Высокий][high_img] Все страницы протестированы во всех актуальных операционных системах (Windows, Android, iOS, Mac...).
 
-- [ ] **Pixel perfect:** ![Высокий][high_img] Pages are close to pixel perfect. Depending on the quality of the creatives, you may not be 100% accurate, but your page needs to be close to your template.
+- [ ] **Pixel-perfect:** ![Высокий][high_img] Страницы близки к pixel-perfect. Вы можете быть не точны на 100%, но ваша страница должна быть близкой к макету.
 
 > [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
-* [ ] **Reading direction:** ![Высокий][high_img] All pages need to be tested for LTR and RTL languages if they need to be supported.
+* [ ] **Направление чтения:** ![Высокий][high_img] Все страницы должны быть протестированы на LTR и RTL языки, если таковые должны поддерживаться.
 
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 1 - Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 2 - Mozilla Hacks](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
