@@ -19,7 +19,7 @@
 2. **[HTML](#html)**
 3. **[Веб-шрифты](#Веб-шрифты)**
 4. **[CSS](#css)**
-5. **[Images](#images)**
+5. **[Изображения](#Изображения)**
 6. **[JavaScript](#javascript)**
 7. **[Security](#security)**
 8. **[Performance](#performance-1)**
@@ -86,7 +86,7 @@
 
 ```html
 <!-- Document Title -->
-<title>Заголовок страницы менее 65 символов</title>
+<title>Заголовок страницы менее 55 символов</title>
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
@@ -363,31 +363,32 @@
 
 ---
 
-## Images
+## Изображения
 
-> **Notes:** For a complete understanding of image optimization, check the free ebook **[Essential Image Optimization](https://images.guide/)** from Addy Osmani.
+> **Примечание:** Для полного понимания оптимизации изображения загляните в бесплатную электронную книгу **[Essential Image Optimization](https://images.guide/)** от Addy Osmani.
 
-### Best practices
+### Лучшие практики
 
-* [ ] **Optimization:** ![Высокий][high_img] All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
+* [ ] **Оптимизация:** ![Высокий][high_img] Все изображения оптимизированя для отображения в браузере. Формат WebP может использоваться для важных страниц (вроде Главной).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
+> * 🛠 Пользуйтесь [ImageOptim](https://imageoptim.com/) для оптимизации ваших изображений бесплатно.
+> * 🛠 Пользуйтесь [Kraken.io](https://kraken.io/web-interface) - отличный сервис для оптимизации как png так и jpg. В бесплатном плане допускается оптимизация файлов до 1 Мб каждый.
 
-* [ ] **Picture/Srcset:** ![Средний][medium_img] You use picture/srcset to provide the most appropriate image for the current viewport of the user.
+* [ ] **Picture/Srcset:** ![Средний][medium_img] Вы используете picture/srcset для обеспечения наиболее подходящего изображения в зависимости от экрана пользователя.
 
 > * 📖 [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
-* [ ] **Retina:** ![Низкий][low_img] You provide layout images 2x or 3x, support retina display.
-* [ ] **Sprite:** ![Средний][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-* [ ] **Width and Height:** ![Высокий][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-* [ ] **Alternative text:** ![Высокий][high_img] All `<img>` have an alternative text which describe the image visually.
+* [ ] **Ретина-дисплеи:** ![Низкий][low_img] Изображения шаблона предоставлены также и в 2-x или 3-x кратном размере для поддержки ретина-дисплеев.
+* [ ] **Спрайты:** ![Средний][medium_img] Маленькие изображения находятся в файле-спрайте (иконки могут быть в SVG-спрайте).
+* [ ] **Ширина и высота:** ![Высокий][high_img] Установите атрибуты `width` и `height` в `<img>`, если размер изображения на странице известен (может быть убран в CSS).
+* [ ] **Альтернативный текст:** ![Высокий][high_img] Все `<img>` имеют атрибут `alt`, в котором дается визуальное описание изображения.
 
 > * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
-* [ ] **Lazy loading:** ![Средний][medium_img] Images are lazyloaded (A noscript fallback is always provided).
+* [ ] **"Ленивая" загрузка:** ![Средний][medium_img] Изображения подгружаются по мере пролистывания страницы (также определено резервное изображение в теге noscript).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
