@@ -21,8 +21,8 @@
 4. **[CSS](#css)**
 5. **[Изображения](#Изображения)**
 6. **[JavaScript](#javascript)**
-7. **[Security](#security)**
-8. **[Performance](#performance-1)**
+7. **[Безопасность](#Безопасность)**
+8. **[Производительность](#Производительность)**
 9. **[Accessibility](#accessibility)**
 10. **[SEO](#seo)**
 
@@ -394,95 +394,95 @@
 
 ## JavaScript
 
-### Best practices
+### Лучшие практики
 
-* [ ] **JavaScript Inline:** ![Высокий][high_img] You don't have any JavaScript code inline (mixed with your HTML code).
-* [ ] **Concatenation:** ![Высокий][high_img] JavaScript files are concatenated.
-* [ ] **Minification:** ![Высокий][high_img] JavaScript files are minified (you can add the `.min` suffix).
+* [ ] **JavaScript Inline:** ![Высокий][high_img] У вас нет никакого инлайнового JavaScript-кода (вписанного в HTML-код).
+* [ ] **Конкатенация:** ![Высокий][high_img] JavaScript-файлы конкатенированы.
+* [ ] **Минификация:** ![Высокий][high_img] JavaScript-файлы минифицированы (можете добавлять суффикс `.min`).
 
 > * 📖 [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
-* [ ] **JavaScript security:**
+* [ ] **Безопасность JavaScript:**
 
 > * 📖 [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
-* [ ] **Non-blocking:** ![Средний][medium_img] JavaScript files are loaded asynchronously using `async` or deferred using `defer` attribute.
+* [ ] **Non-blocking:** ![Средний][medium_img] JavaScript-файлы загружаются асинхронно с помощью атрибута `async` или отложенно с атрибутом `defer`.
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Modernizr:** ![Низкий][low_img] If you need to target some specific features you can use a custom Modernizr to add classes in your `<html>` tag.
+* [ ] **Modernizr:** ![Низкий][low_img] Если вам нужно ориентироваться на какие-то специфические фичи, вы можете использовать обычный Modernizr для добавления классов в тег `<html>`.
 
 > * 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
 
-### JavaScript testing
+### Тестирование JavaScript
 
-* [ ] **ESLint:** ![Высокий][high_img] No errors are flagged by ESLint (based on your configuration or standards rules).
+* [ ] **ESLint:** ![Высокий][high_img] Стоит отметка об отсутствии ошибок в ESLint (основанной на ваших настройках или стандартных правилах).
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
-## Security
+## Безопасность
 
-### Scan and check your web site
+### Сканирование и проверка вашего сайта
 
 > * [securityheaders.io](https://securityheaders.io/)
 > * [Observatory by Mozilla](https://observatory.mozilla.org/)
 > * [ASafaWeb - Automated Security Analyser for ASP.NET Websites](https://asafaweb.com/)
 
-### Best practices
+### Лучшие практики
 
-* [ ] **HTTPS:** ![Средний][medium_img] HTTPS is used on every pages and for all external content (plugins, images...).
+* [ ] **HTTPS:** ![Средний][medium_img] Используется проткол HTTPS на всех страницах и для всех внешних ресурсов (плагинов, изображений и т.п.).
 
 > * 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > * 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
 > * 📖 [Strict Transport Security](http://caniuse.com/#feat=stricttransportsecurity)
 
-* [ ] **HTTP Strict Transport Security (HSTS):** ![Средний][medium_img] The HTTP header is set to 'Strict-Transport-Security'.
+* [ ] **HTTP Strict Transport Security (HSTS):** ![Средний][medium_img] Заголовок HTTP установлен на 'Strict-Transport-Security'.
 
 > * 🛠 [Check HSTS preload status and eligibility](https://hstspreload.org/)
 > * 📖 [HTTP Strict Transport Security Cheat Sheet - OWASP](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 > * 📖 [Transport Layer Protection Cheat Sheet - OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
-* [ ] **Cross Site Request Forgery (CSRF):** ![Высокий][high_img] You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
+* [ ] **Cross Site Request Forgery (CSRF):** ![Высокий][high_img] Вы ручаетесь, что запросы вашей серверной части правомерны и идут с вашего сайта / приложения.
 
 > * 📖 [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
 
-* [ ] **Cross Site Scripting (XSS):** ![Высокий][high_img] Your page or website is free from XSS possible issues.
+* [ ] **Cross Site Scripting (XSS):** ![Высокий][high_img] На вашей страниеце или сайте отсутсвтуют возможные XSS-уязвимости.
 
 > * 📖 [XSS (Cross Site Scripting) Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 > * 📖 [DOM based XSS Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
 
-* [ ] **Content Type Options** ![Средний][medium_img] Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
+* [ ] **Content Type Options** ![Средний][medium_img] Предотвращены попытки Google Chrome и Internet Explorer проанализировать тип содержимого ответа сервера.
 
 > * 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-* [ ] **X-Frame-Options (XFO)** ![Средний][medium_img] Protects your visitors against clickjacking attacks.
+* [ ] **X-Frame-Options (XFO)** ![Средний][medium_img] Защита ваших посетителей от кликджекинга.
 
 > * 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > * 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Вверх](#Содержание)**
 
 ---
 
-## Performance
+## Производительность
 
-### Best practices
+### Лучшие практики
 
-- [ ] **Weight page:** ![Высокий][high_img] The weight of each page is between 0 and 500 KB.
+- [ ] **Вес страницы:** ![Высокий][high_img] Вес каждой страницы от 0 до 500 Kб.
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
-- [ ] **Minified:** ![Средний][medium_img] Your HTML is minified.
+- [ ] **Минифицировано:** ![Средний][medium_img] Ваш HTML минифицирован.
 > * 🛠 [W3C Validator](https://validator.w3.org/)
 
-* [ ] **Lazy loading:** ![Средний][medium_img] Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
+* [ ] **Ленивая загрузка:** ![Средний][medium_img] Изображения, скрипты и стили необходимо подгружать методом "ленивой" загрзузки для снижения времени ответа (Смотрите подробнее в соответствующих разделах).
 
-* [ ] **Cookie size:** If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
+* [ ] **Размер куки:** Если вы используете куки, удостоверьтесь, что каждая куки не занимает больше 4096 байт, и на вашем домене не используется более 20 кук.
 
 > * 📖 [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
